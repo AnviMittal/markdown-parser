@@ -180,7 +180,8 @@ public class MarkdownParseTest {
         String content = Files.readString(Path.of("./test-file11.md"));
         ArrayList<String> links = MarkdownParse.getLinks(content);
 
-        ArrayList<String> result = new ArrayList<>(Arrays.asList("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule"));
+        ArrayList<String> result = new ArrayList<>(Arrays.asList
+        ("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule"));
         assertArrayEquals(result.toArray(), links.toArray());
     }
 }
