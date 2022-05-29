@@ -1,10 +1,17 @@
 import static org.junit.Assert.*;
-import org.junit.*;
+
+import java.util.ArrayList;
+    import java.util.Arrays;
+
+    import org.junit.*;
+
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class MarkdownParseTest {
-	@Test
-	public void addition() {
-		assertEquals(2, 1 + 1);
-	}
 	@Test
     public void snipett1() throws IOException{
         String content = Files.readString(Path.of("./test-file9.md"));
@@ -33,4 +40,3 @@ public class MarkdownParseTest {
         assertArrayEquals(result.toArray(), links.toArray());
     }
 }
-
